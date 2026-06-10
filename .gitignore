@@ -64,3 +64,4 @@ local_tools/
 data/pdf_inbox/
 data/corrupt_pdfs/
 manuscript/
+screening/missing_pdfs.*
