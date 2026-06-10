@@ -1,0 +1,75 @@
+{
+  "research_question": "RQ2",
+  "design_principles": [
+    {
+      "id": "DP-1",
+      "name": "Integrate with Legacy and Operational Technology (OT) Systems",
+      "statement": "Industrial AI systems must incorporate specialized interfaces, protocols, and security measures to seamlessly integrate with existing legacy and operational technology (OT) infrastructure, including PLCs, SCADA, and air-gapped networks.",
+      "rationale": "Generic MLOps frameworks are not designed to handle the complexities of integrating with heterogeneous, often proprietary, and outdated industrial control systems. This principle addresses the critical need for native support for industrial communication protocols and hardware interfaces to enable AI deployment in real-world industrial settings.",
+      "implementation_guidance": [
+        "Develop or adopt specialized connectors and protocol converters for common industrial communication standards (e.g., Modbus, OPC UA, PROFINET).",
+        "Implement robust data acquisition strategies that account for data formats, sampling rates, and reliability of legacy OT systems.",
+        "Design secure, one-way data diodes or air-gapped solutions for transferring data from critical OT networks to IT/cloud environments for AI processing.",
+        "Establish clear data governance and access control policies that respect the security and operational integrity of OT systems."
+      ],
+      "supporting_gap": "TI3",
+      "evidence_strength": "strong"
+    },
+    {
+      "id": "DP-2",
+      "name": "Establish Native Industrial MLOps Frameworks",
+      "statement": "Industrial AI implementations require the development or adoption of MLOps frameworks specifically designed to manage the lifecycle of AI models within cyber-physical systems, real-time OT integration, and highly distributed edge-cloud architectures.",
+      "rationale": "Generic MLOps frameworks lack the specific functionalities and architectural considerations required for industrial cyber-physical systems and legacy OT. This principle emphasizes the need for tailored platforms that can automate ML functions, manage model lifecycle, and integrate with unique industrial constraints beyond general-purpose tools.",
+      "implementation_guidance": [
+        "Prioritize MLOps platforms that offer native support for industrial data sources, real-time processing, and deployment to resource-constrained edge devices.",
+        "Develop automated pipelines for data ingestion, model training, validation, and deployment that are resilient to industrial network variability and data quality issues.",
+        "Implement robust model versioning and rollback mechanisms that can operate within the constraints of industrial control systems.",
+        "Integrate capabilities for continuous monitoring of model performance and data drift specifically tailored for industrial sensor data and operational contexts."
+      ],
+      "supporting_gap": "TI7",
+      "evidence_strength": "strong"
+    },
+    {
+      "id": "DP-3",
+      "name": "Orchestrate Edge-Cloud Continuum for Industrial AI",
+      "statement": "Industrial AI systems must implement sophisticated orchestration and data flow management across a tightly integrated, often real-time, and highly distributed edge-cloud continuum, accounting for heterogeneous operational environments and resource constraints.",
+      "rationale": "Generic MLOps often treats edge as a distinct deployment target, whereas industrial AI demands seamless, latency-critical interaction across the entire edge-cloud spectrum. This principle addresses the need for holistic management of AI workloads, data processing, and model updates across deeply integrated, heterogeneous operational environments.",
+      "implementation_guidance": [
+        "Design a distributed architecture that intelligently partitions AI workloads between edge devices and cloud infrastructure based on latency, bandwidth, and computational requirements.",
+        "Implement robust data synchronization and communication protocols optimized for intermittent connectivity and varying network conditions in industrial settings.",
+        "Develop mechanisms for remote model deployment, updates, and monitoring on resource-constrained edge devices, including over-the-air (OTA) updates.",
+        "Utilize federated learning or similar decentralized approaches to train models on local edge data while preserving data privacy and minimizing data transfer to the cloud."
+      ],
+      "supporting_gap": "TI1",
+      "evidence_strength": "moderate"
+    },
+    {
+      "id": "DP-4",
+      "name": "Ensure Industrial-Grade Security, Privacy, and Regulatory Compliance",
+      "statement": "Industrial AI systems must embed security, privacy, and regulatory compliance measures that meet stringent, often safety-critical, industry-specific standards, including requirements for on-premises deployments, air-gapped networks, and 'locked' models.",
+      "rationale": "Industrial AI's regulatory landscape is often tied to physical safety, critical infrastructure, and specific industry standards, leading to more rigid constraints on model modification, data residency, and network architecture than generic MLOps anticipates. This principle ensures AI systems adhere to these heightened requirements.",
+      "implementation_guidance": [
+        "Implement robust access control and authentication mechanisms tailored for OT environments, including multi-factor authentication and role-based access.",
+        "Design data encryption strategies for data at rest and in transit that comply with industry-specific security standards and data residency requirements.",
+        "Establish immutable model deployment and versioning processes for safety-critical applications, preventing unauthorized modifications and ensuring auditability.",
+        "Conduct regular security audits and penetration testing specifically targeting the unique vulnerabilities of industrial control systems and AI integrations."
+      ],
+      "supporting_gap": "TI4",
+      "evidence_strength": "moderate"
+    },
+    {
+      "id": "DP-5",
+      "name": "Integrate Human-in-the-Loop with Domain Expertise",
+      "statement": "Industrial AI systems must deeply integrate human domain experts (e.g., process engineers, maintenance specialists) into the AI lifecycle, providing mechanisms for continuous feedback, operational validation, and interpretation of model decisions in safety-critical contexts.",
+      "rationale": "Industrial AI requires a much deeper, continuous integration with highly specialized operational domain experts, where model explainability and human feedback are essential for operational trust and safety, not just business understanding. This principle ensures AI systems are validated and trusted by those with critical operational knowledge.",
+      "implementation_guidance": [
+        "Design user interfaces and dashboards that provide explainable AI (XAI) insights tailored for domain experts, highlighting key features influencing model predictions.",
+        "Establish formal feedback loops where operational personnel can validate model outputs, flag anomalies, and provide input for model retraining and refinement.",
+        "Develop simulation environments or digital twins that allow domain experts to test and validate AI model behavior under various operational scenarios before real-world deployment.",
+        "Provide training and collaboration platforms that bridge the knowledge gap between data scientists and industrial domain experts, fostering mutual understanding and trust."
+      ],
+      "supporting_gap": "TI6",
+      "evidence_strength": "moderate"
+    }
+  ]
+}

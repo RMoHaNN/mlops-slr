@@ -1,0 +1,67 @@
+{
+  "gaps": [
+    {
+      "industrial_theme_id": "TI1",
+      "industrial_theme_name": "Edge-Cloud Continuum for Industrial AI",
+      "present_in_generic": "partially",
+      "gap_level": "MEDIUM",
+      "gap_explanation": "While generic MLOps acknowledges edge deployments (TG5), the industrial context introduces a much tighter, often real-time, and highly distributed edge-cloud continuum. This requires sophisticated orchestration and data flow management across deeply integrated, heterogeneous operational environments, which is less emphasized in generic literature.",
+      "why_generic_falls_short": "Generic MLOps often treats edge as a distinct deployment target, whereas industrial AI demands seamless, often bi-directional, and latency-critical interaction across the entire edge-cloud spectrum, including resource-constrained devices and air-gapped networks, which generic solutions are not designed to manage holistically.",
+      "closest_generic_theme": "Deployment Complexity & Environment Heterogeneity"
+    },
+    {
+      "industrial_theme_id": "TI2",
+      "industrial_theme_name": "Data Dynamics and Quality Challenges",
+      "present_in_generic": true,
+      "gap_level": "LOW",
+      "gap_explanation": "Both streams extensively cover data dynamics, drift, scarcity, and quality issues. The challenges are fundamentally similar, although the specific types of industrial data (e.g., sensor data, highly imbalanced fault data) might present unique nuances, the core problems and proposed solutions (drift detection, data augmentation) are consistent.",
+      "why_generic_falls_short": "Generic MLOps practices for data management, drift detection, and quality assurance are largely transferable. While industrial data might have specific characteristics, the underlying principles and techniques for addressing these challenges are well-established in generic MLOps.",
+      "closest_generic_theme": "Data Dynamics & Quality Management"
+    },
+    {
+      "industrial_theme_id": "TI3",
+      "industrial_theme_name": "Integration with Legacy and OT Systems",
+      "present_in_generic": false,
+      "gap_level": "HIGH",
+      "gap_explanation": "This theme is largely absent from generic MLOps literature, which typically assumes modern, API-driven, and cloud-native environments. Industrial AI faces unique challenges integrating with decades-old operational technology (OT) like PLCs, SCADA, and air-gapped networks, requiring specialized protocols and hardware interfaces.",
+      "why_generic_falls_short": "Generic MLOps frameworks are not designed to handle the complexities of integrating with heterogeneous, often proprietary, and outdated industrial control systems. They lack native support for industrial communication protocols, legacy hardware, and the security constraints of OT networks.",
+      "closest_generic_theme": null
+    },
+    {
+      "industrial_theme_id": "TI4",
+      "industrial_theme_name": "Security, Privacy, and Regulatory Compliance",
+      "present_in_generic": true,
+      "gap_level": "MEDIUM",
+      "gap_explanation": "While generic MLOps addresses trustworthy AI and governance (TG4), industrial AI faces significantly stricter and often safety-critical regulatory compliance (e.g., FDA for medical devices, safety standards for machinery). This often mandates on-premises deployments, air-gapped networks, and 'locked' models, which are more extreme than typical enterprise privacy concerns.",
+      "why_generic_falls_short": "Generic MLOps often focuses on data privacy and ethical AI in a broader enterprise context. Industrial AI's regulatory landscape is often tied to physical safety, critical infrastructure, and specific industry standards, leading to more rigid constraints on model modification, data residency, and network architecture that generic solutions do not fully anticipate.",
+      "closest_generic_theme": "Trustworthy AI & Governance"
+    },
+    {
+      "industrial_theme_id": "TI5",
+      "industrial_theme_name": "Automated and Adaptive ML Lifecycle Management",
+      "present_in_generic": true,
+      "gap_level": "LOW",
+      "gap_explanation": "Both streams emphasize the need for continuous monitoring, drift detection, and automated retraining. The core principles of adaptive ML lifecycle management are well-covered in generic MLOps (TG7). Industrial applications might have higher stakes for model degradation, but the mechanisms for detection and adaptation are similar.",
+      "why_generic_falls_short": "Generic MLOps practices for monitoring and adaptive retraining are largely applicable. While industrial environments might demand higher reliability and faster response to drift, the fundamental techniques for achieving this are consistent across both streams.",
+      "closest_generic_theme": "Model Monitoring & Adaptive Retraining"
+    },
+    {
+      "industrial_theme_id": "TI6",
+      "industrial_theme_name": "Human-in-the-Loop and Domain Expertise",
+      "present_in_generic": true,
+      "gap_level": "MEDIUM",
+      "gap_explanation": "Generic MLOps acknowledges organizational and collaboration gaps (TG6) and the need for explainability (TG4). However, in industrial settings, the integration of deep domain expertise (e.g., process engineers, maintenance specialists) is often more critical and iterative, especially for interpreting complex sensor data and validating model decisions in safety-critical contexts. The 'human-in-the-loop' is less about general business alignment and more about operational validation.",
+      "why_generic_falls_short": "Generic MLOps often focuses on bridging gaps between data scientists and business stakeholders. Industrial AI requires a much deeper, continuous integration with highly specialized operational domain experts, where model explainability and human feedback are essential for operational trust and safety, not just business understanding.",
+      "closest_generic_theme": "Organizational & Collaboration Gaps"
+    },
+    {
+      "industrial_theme_id": "TI7",
+      "industrial_theme_name": "Lack of Standardized Industrial MLOps Frameworks",
+      "present_in_generic": false,
+      "gap_level": "HIGH",
+      "gap_explanation": "While generic MLOps discusses process automation and standardization (TG3), it focuses on general-purpose tools and practices. Industrial AI specifically highlights a lack of *native* MLOps platforms tailored for its unique constraints, such as cyber-physical systems, real-time OT integration, and highly distributed edge-cloud architectures, which generic frameworks do not adequately address.",
+      "why_generic_falls_short": "Generic MLOps frameworks are typically designed for cloud-native or enterprise software deployments and lack the specific functionalities, integrations, and architectural considerations required for industrial cyber-physical systems, legacy OT, and the unique operational constraints of manufacturing and critical infrastructure.",
+      "closest_generic_theme": "MLOps Process Automation & Standardization"
+    }
+  ]
+}

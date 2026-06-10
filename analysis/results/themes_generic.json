@@ -1,0 +1,131 @@
+{
+  "stream": "Generic",
+  "themes": [
+    {
+      "id": "TG1",
+      "name": "Data Dynamics & Quality Management",
+      "description": "This theme addresses the inherent challenges of managing data in AI systems, including its continuous evolution, quality issues, and the need for robust processes to ensure data integrity and relevance throughout the ML lifecycle. It highlights how data's dynamic nature directly impacts model performance and operational stability.",
+      "sub_themes": [
+        "Data drift and concept drift",
+        "Data scarcity and imbalance",
+        "Data quality and validation",
+        "Data versioning and provenance"
+      ],
+      "paper_count": 80,
+      "representative_quotes": [
+        "Data are constantly changing, implying ML models need retraining or pipeline rebuilding to tackle feature drift.",
+        "Raw, often incomplete data from web scraping requires significant enrichment before use.",
+        "The statistical distribution of input variables or the relationship between input and output variables can change over time due to factors like environmental regulations, technology advancements, or production volume."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TG2",
+      "name": "Resource Constraints & Performance Optimization",
+      "description": "This theme focuses on the limitations of computational resources (CPU, GPU, memory, power) across various deployment environments, from tiny edge devices to cloud infrastructure. It emphasizes the need for model optimization, efficient resource allocation, and scalable architectures to meet performance, latency, and cost requirements.",
+      "sub_themes": [
+        "Limited computational power/memory",
+        "Real-time latency requirements",
+        "Energy consumption and cost",
+        "Scalability and dynamic resource allocation"
+      ],
+      "paper_count": 75,
+      "representative_quotes": [
+        "Extremely constrained computational power and storage on target devices (MCUs like Raspberry Pi Pico, ESP32, Arduino, STM32 families).",
+        "High GPU utilization across various models, indicating potential performance bottlenecks when training multiple models simultaneously.",
+        "LLMs (often billions of parameters) demand extensive GPU memory and compute, making it non-trivial to meet real-time latency requirements."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TG3",
+      "name": "MLOps Process Automation & Standardization",
+      "description": "This theme covers the need for automating and standardizing the entire ML lifecycle, from experimentation to deployment and monitoring. It highlights the challenges of manual processes, lack of consistent methodologies, and the demand for integrated tools and frameworks to streamline MLOps workflows.",
+      "sub_themes": [
+        "End-to-end pipeline automation",
+        "CI/CD/CT integration",
+        "Experiment tracking and reproducibility",
+        "Standardization of practices and tools"
+      ],
+      "paper_count": 90,
+      "representative_quotes": [
+        "Manual model development and operations slow down the industrialization of ML methodologies.",
+        "Lack of generally accepted standards and best practices for implementing MLOps.",
+        "Most existing ML pipelines are not well-suited for the initial stages of ML development due to high setup and maintenance overheads."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TG4",
+      "name": "Trustworthy AI & Governance",
+      "description": "This theme addresses the critical need for ethical, transparent, and compliant AI systems, particularly in high-stakes domains. It encompasses challenges related to bias, explainability, privacy, security, and regulatory adherence, emphasizing the integration of governance throughout the ML lifecycle.",
+      "sub_themes": [
+        "Ethical AI and bias mitigation",
+        "Explainable AI (XAI)",
+        "Privacy and data security",
+        "Regulatory compliance and auditability"
+      ],
+      "paper_count": 65,
+      "representative_quotes": [
+        "AI systems involve a higher degree of uncertainty and more ethical risk due to their dynamic, autonomous, opaque decision-making, and historical-data-dependent behaviors.",
+        "Privacy regulations (HIPAA, GDPR) limit data sharing: This impedes large-scale supervised learning across institutions.",
+        "Lack of practical guidelines and methodologies for achieving and assessing AI trustworthiness, despite extensive ethical guidelines."
+      ],
+      "constraint_type": "mixed"
+    },
+    {
+      "id": "TG5",
+      "name": "Deployment Complexity & Environment Heterogeneity",
+      "description": "This theme explores the difficulties of deploying and managing AI models across diverse and often distributed environments, including cloud, edge, on-premises, and hybrid setups. It highlights challenges related to system integration, interoperability, and adapting models to varying operational contexts.",
+      "sub_themes": [
+        "Hybrid/multi-cloud deployments",
+        "Edge/TinyML integration",
+        "System integration and interoperability",
+        "Containerization and microservices"
+      ],
+      "paper_count": 70,
+      "representative_quotes": [
+        "Variety of computing environments (Cloud, distributed, edge, hybrid) complicates deployment.",
+        "Standard ML deployment often assumes sufficient computational resources and continuous connectivity, which is not viable for ultra-low power embedded devices in vehicles.",
+        "Heterogeneous infrastructure: Telecom networks comprise diverse hardware and software components, making standardized AI deployment difficult."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TG6",
+      "name": "Organizational & Collaboration Gaps",
+      "description": "This theme addresses the human and organizational challenges in implementing MLOps, including skill gaps, lack of cross-functional collaboration, and the disconnect between technical and business stakeholders. It emphasizes the need for clear roles, shared understanding, and integrated workflows to bridge these divides.",
+      "sub_themes": [
+        "Skill gaps and specialized expertise",
+        "Cross-functional collaboration",
+        "Business value alignment",
+        "Organizational maturity"
+      ],
+      "paper_count": 50,
+      "representative_quotes": [
+        "ML experts often work in silos, detached from the rest of the project team and customers, hindering collaboration required for continuous practices.",
+        "Narrow specialization within data science teams, IT engineers, and business representatives makes it difficult to design an appropriate business case.",
+        "Lack of data science competence in normal hospitals/diagnosis centers prevents widespread deployment of ML models."
+      ],
+      "constraint_type": "organisational"
+    },
+    {
+      "id": "TG7",
+      "name": "Model Monitoring & Adaptive Retraining",
+      "description": "This theme focuses on the necessity of continuously monitoring deployed models for performance degradation, drift, and anomalies, and implementing automated or semi-automated retraining strategies. It highlights the challenges of real-time detection, label latency, and ensuring model integrity over time.",
+      "sub_themes": [
+        "Continuous model performance monitoring",
+        "Drift detection (data, concept, label)",
+        "Automated/adaptive retraining",
+        "Label latency and ground truth availability"
+      ],
+      "paper_count": 60,
+      "representative_quotes": [
+        "Model performance can degrade over time due to model drift, necessitating continuous monitoring and retraining.",
+        "Target labels are not available immediately in most real-world applications, making real-time monitoring of prediction accuracy impossible.",
+        "Performance degradation over time due to model drift, where data distributions change from original training conditions, leading to inaccurate or unreliable predictions."
+      ],
+      "constraint_type": "technical"
+    }
+  ]
+}

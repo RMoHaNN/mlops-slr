@@ -1,0 +1,66 @@
+# PDFs — copyrighted, not redistributed
+*.pdf
+output/pdf_cache/
+downloads/
+
+# Zotero local database files
+*.zotero
+zotero.sqlite*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.uv/
+uv.lock
+
+# Quarto / Pandoc build artefacts
+_site/
+_freeze/
+*.quarto/
+.quarto/
+
+# Temp files
+~$*.docx
+~$*.qmd
+bibtex_errors.txt
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets / credentials
+.env
+*.key
+secrets.*
+
+# Output logs (not needed for replication)
+output/pdf_fetch_log.csv
+output/pdf_attach_log.csv
+
+# Backup files
+*.bak
+*.bak-*
+*.csv.bak
+
+# Word/compiled outputs (generated from .qmd source)
+manuscript/*.docx
+manuscript/~$*.docx
+
+# Claude Code local settings (not for public)
+.claude/
+
+# Intermediate work artifacts
+fact-check-reports/
+
+# Template file — actual search is documented in data/raw/search_strings.md
+search_config.py
+
+# Local-only artifacts (not part of the published pipeline)
+local_tools/
+data/pdf_inbox/
+data/corrupt_pdfs/
+manuscript/

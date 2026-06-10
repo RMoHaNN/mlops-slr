@@ -1,0 +1,138 @@
+{
+  "stream": "Industrial",
+  "themes": [
+    {
+      "id": "TI1",
+      "name": "Edge-Cloud Continuum for Industrial AI",
+      "description": "Industrial AI deployments frequently span from resource-constrained edge devices to powerful cloud infrastructure. This continuum is essential for balancing real-time processing needs, data residency, and computational demands, but introduces complexity in deployment and management.",
+      "sub_themes": [
+        "Resource-constrained edge devices",
+        "Low-latency requirements",
+        "Hybrid deployment strategies",
+        "Distributed data processing"
+      ],
+      "paper_count": 20,
+      "representative_quotes": [
+        "Edge devices are limited in bandwidth, storage, and processing power, making it impractical to perform complex ML training directly on them.",
+        "Running ML processes exclusively on the cloud can lead to long latencies in industrial IoT environments.",
+        "A central cloud-based Kubernetes cluster manages numerous smaller edge clusters, where ML models are deployed to reduce latency.",
+        "Critical real-time inferences are performed at the edge using lightweight models (Edge AI Model), while computationally intensive training/retraining tasks are handled by the platform tier (Cloud Model)."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TI2",
+      "name": "Data Dynamics and Quality Challenges",
+      "description": "Industrial environments are characterized by dynamic, often messy, and scarce data. This includes issues like data drift, limited labeled data, and data quality degradation, which severely impact model performance and necessitate robust data management and adaptation strategies.",
+      "sub_themes": [
+        "Concept and data drift",
+        "Data scarcity and imbalance",
+        "Data quality and messiness",
+        "Real-time data processing"
+      ],
+      "paper_count": 25,
+      "representative_quotes": [
+        "Data drift: Statistical properties of incoming data diverge from training distribution, degrading predictive accuracy.",
+        "Limited access to labeled data: Industrial environments often have vast amounts of unlabeled data, and manual labeling is generally not feasible.",
+        "Scarcity of labeled fault data and highly imbalanced operational datasets (healthy conditions dominate) in maritime sector, making direct classification challenging.",
+        "Data quality degradation: Drift affects accuracy, completeness, consistency, timeliness, and validity of data, challenging underlying data-quality landscape."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TI3",
+      "name": "Integration with Legacy and OT Systems",
+      "description": "A significant structural challenge in industrial AI is the need to integrate new ML solutions with existing operational technology (OT) and legacy IT systems. This involves dealing with diverse protocols, outdated hardware, and established infrastructure, often leading to complex integration efforts.",
+      "sub_themes": [
+        "Heterogeneous OT layer",
+        "Legacy hardware and software",
+        "Air-gapped networks",
+        "PLC integration"
+      ],
+      "paper_count": 15,
+      "representative_quotes": [
+        "Traditional MLOps pipelines do not cater directly to legacy systems, requiring customized inference pipelines for DNN deployment.",
+        "Integration with legacy systems (e.g., CNC machines, MES/ERP/SCADA) requires standardised interfaces and careful data handling.",
+        "Existing MLOps frameworks lack easy integration with pre-existing PLC infrastructure, which is the backbone of factory automation.",
+        "Traditional inference optimization approaches result in poor inference performance on brownfield industrial architectures with existing legacy hardware and software."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TI4",
+      "name": "Security, Privacy, and Regulatory Compliance",
+      "description": "Industrial AI deployments operate under strict security, data privacy, and regulatory requirements. This often restricts the use of public cloud solutions, necessitates on-premises deployments, and demands robust identity and access management, especially for sensitive industrial or health data.",
+      "sub_themes": [
+        "Data confidentiality and privacy",
+        "Regulatory constraints (e.g., FDA)",
+        "Network isolation and air-gapped environments",
+        "Trust and reliability of ML applications"
+      ],
+      "paper_count": 12,
+      "representative_quotes": [
+        "Stringent privacy requirements: Industrial data often contains sensitive information that must be protected to comply with regulatory standards.",
+        "Security and data-privacy constraints: Operationalized through workspace isolation, role-based access control, and secrets management integrated into deployment automation.",
+        "Data confidentiality requirements prohibit the use of cloud-based platforms for certain datasets, forcing reliance on less capable on-premises tooling.",
+        "Regulatory considerations: Legislation (e.g., US FDA, EU Medical Devices) may support 'locked' or 'frozen' ML models that cannot be improved or modified post-deployment."
+      ],
+      "constraint_type": "mixed"
+    },
+    {
+      "id": "TI5",
+      "name": "Automated and Adaptive ML Lifecycle Management",
+      "description": "The dynamic nature of industrial environments necessitates highly automated and adaptive MLOps practices. This includes continuous monitoring, automated drift detection, and self-healing or retraining mechanisms to maintain model accuracy and operational stability over time.",
+      "sub_themes": [
+        "Continuous monitoring and drift detection",
+        "Automated retraining and redeployment",
+        "Self-healing ML systems",
+        "Feedback loops for model adaptation"
+      ],
+      "paper_count": 22,
+      "representative_quotes": [
+        "Continuous drift detection: Hybrid strategy combining statistical hypothesis testing (Kolmogorov\u2013Smirnov test) with online learning detectors (ADWIN) to quantify drift severity.",
+        "Automated anomaly and drift detection: Using statistical and ML-based methods (e.g., PSI, Jensen Shannon divergence, Page Hinkley test) to identify deviations.",
+        "AIOps Engine for intelligent monitoring, anomaly detection, and self-healing capabilities, triggering auto-recovery or retraining.",
+        "Forecast-aware concept drift detection: Integrates Facebook Prophet's confidence intervals with statistical drift detectors to trigger retraining only when prediction volatility or drift exceeds critical thresholds."
+      ],
+      "constraint_type": "technical"
+    },
+    {
+      "id": "TI6",
+      "name": "Human-in-the-Loop and Domain Expertise",
+      "description": "Despite automation, human involvement and domain expertise remain crucial in industrial AI. This includes iterative collaboration between domain experts and ML engineers, the need for explainable AI (XAI) to build trust, and the challenge of integrating human feedback into automated pipelines.",
+      "sub_themes": [
+        "Collaboration between domain experts and ML engineers",
+        "Explainable AI (XAI) for trust and understanding",
+        "Human feedback integration",
+        "Sparse ML knowledge in SMEs"
+      ],
+      "paper_count": 10,
+      "representative_quotes": [
+        "Iterative collaboration between domain experts and ML engineers: A tight, iterative loop is established where domain experts provide data/labels, triggering automatic model building.",
+        "Difficulty communicating ML inferences, predictions, and decisions to domain experts who may not have a technical background in ML, requiring insights into 'how and why' a model produced an output.",
+        "Insufficient integration of human-in-the-loop: Many DCAI approaches either fully automate or focus solely on human input, lacking a balanced integration.",
+        "Automated retraining without human involvement can be problematic in scenarios where human actions cause state changes that invalidate model performance."
+      ],
+      "constraint_type": "organisational"
+    },
+    {
+      "id": "TI7",
+      "name": "Lack of Standardized Industrial MLOps Frameworks",
+      "description": "There is a significant gap in standardized, comprehensive MLOps platforms and methodologies specifically tailored for industrial applications. Existing tools often focus on cloud-native, generic ML, or lack the specific functionalities needed for the unique constraints of industrial environments.",
+      "sub_themes": [
+        "Absence of native industrial MLOps platforms",
+        "Limited tools for cyber-physicality of IoT",
+        "Focus on cloud-centric vs. industrial needs",
+        "Lack of integrated data governance"
+      ],
+      "paper_count": 18,
+      "representative_quotes": [
+        "There is a missing native MLOps platform specifically designed for UMBRELLA that can automate ML-related functions beyond basic Kubernetes orchestration.",
+        "Current MLOps practices and tools primarily focus on creating new, customized ML models from custom data and serving on local, private, or public cloud deployments.",
+        "Existing MLOps frameworks for edge AI are often fragmented, focusing on specific aspects like hardware acceleration or data processing, but lack comprehensive ML model lifecycle management.",
+        "Fully automated MLOps frameworks remain underdeveloped, often requiring manual intervention and oversight at various stages."
+      ],
+      "constraint_type": "technical"
+    }
+  ]
+}
